@@ -1,0 +1,16 @@
+{
+  "name": "frontendmentor",
+  "version": "1.0.0",
+  "author": "Asim Bera <asimbera@outlook.in> (https://asim.social/)",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel serve index.pug",
+    "build": "parcel build index.pug"
+  },
+  "devDependencies": {
+    "@parcel/transformer-image": "2.0.0-beta.2",
+    "@parcel/transformer-pug": "2.0.0-beta.2",
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
+  }
+}

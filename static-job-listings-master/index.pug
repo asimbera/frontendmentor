@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.scss")
+    title Frontend Mentor | Job Listings
+  body
+    #header
+      #filter-container
+        #filter
+          #chips
+            .chip
+              p Chip
+              .clear-chip x
+          p#clear Clear
+    #content
+      .card
+        .left
+          img.logo(src="./images/insure.svg", alt="Logo")
+          div.meta
+            p.company Company
+            p.title Full Stack Developer
+            p.subtitle 1d ago - Full Time - USA only
+        .right
+          p.tag Fullstack
+          p.tag Javascript
+          p.tag Ruby
+
+    script(src="./index.ts")

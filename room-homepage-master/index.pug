@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.scss")
+    title Frontend Mentor | Room homepage
+  body
+    #cover
+      .header
+        img#menu-btn(src="./images/icon-hamburger.svg", alt="")
+        img#logo(src="./images/logo.svg", alt="Logo")
+        ul#nav-links
+          li#close
+            img(src="./images/icon-close.svg", alt="")
+          li
+            a(href="") home
+          li
+            a(href="") shop
+          li
+            a(href="") about
+          li
+            a(href="") contact
+        //- img#menu-btn(src="./images/icon-hamburger.svg", alt="")
+        div(style="width: 20px")
+
+      #cover-image
+        #pager
+          img#previous(src="./images/icon-angle-left.svg", alt="")
+          img#next(src="./images/icon-angle-right.svg", alt="")
+      //- img#cover-image(src="./images/desktop-image-hero-1.jpg", alt="")
+      #cover-meta
+        p#cover-title Discover innovative ways to decorate
+        p#cover-description
+          | We provide unmatched quality, comfort, and style for property owners across the country.
+          | Our experts combine form and function in bringing your vision to life. Create a room in your
+          | own style with our collection and make your property a reflection of you and what you love.
+        .action
+          p Shop now
+          img(src="./images/icon-arrow.svg", alt="")
+    #about
+      //- img(src="./images/image-about-dark.jpg", alt="")
+      .dark-img
+      .text
+        p.title About our furniture
+        p.description
+          | Our multifunctional collection blends design and function to suit your individual taste.
+          | Make each room unique, or pick a cohesive theme that best express your interests and what
+          | inspires you. Find the furniture pieces you need, from traditional to contemporary styles
+          | or anything in between. Product specialists are available to help you create your dream space.
+      //- img(src="./images/image-about-light.jpg", alt="")
+      .light-img
+  script(src="index.ts")

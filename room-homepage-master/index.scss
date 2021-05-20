@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700&display=swap');
+
+@mixin breakpoint($width) {
+  @media only screen and (max-width: $width) {
+    @content;
+  }
+}
+
+@mixin md {
+  @include breakpoint(576px) {
+    @content;
+  }
+}
+
+:root {
+  --dark-gray: hsl(0, 0%, 63%);
+  --black: hsl(0, 0%, 0%);
+  --white: hsl(0, 0%, 100%);
+  --very-dark-gray: hsl(0, 0%, 27%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 12px;
+
+  height: 100vh;
+  min-height: 768px;
+
+  @include md {
+    // height: auto;
+    // min-height: auto;
+  }
+
+  display: flex;
+  flex-direction: column;
+}
+
+#cover {
+  flex: 7;
+  position: relative;
+
+  .header {
+    position: absolute;
+    top: 55px;
+    left: 55px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+
+    @include md {
+      top: 0;
+      left: 0;
+      right: 0;
+
+      padding: 50px 20px;
+      justify-content: space-between;
+    }
+
+    #menu-btn {
+      display: none;
+      width: 20px;
+      height: auto;
+      cursor: pointer;
+
+      @include md {
+        display: block;
+      }
+    }
+
+    #nav-links {
+      margin-left: 40px;
+      list-style: none;
+      display: flex;
+      align-items: center;
+
+      @include md {
+        display: none;
+        position: fixed;
+        background-color: var(--white);
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: 0;
+        padding: 40px 20px;
+      }
+
+      #close {
+        display: none;
+
+        @include md {
+          display: block;
+          flex: 1;
+        }
+
+        img {
+          height: auto;
+          width: 20px;
+        }
+      }
+
+      li + li {
+        margin-left: 25px;
+      }
+
+      li {
+        position: relative;
+        &:hover {
+          &::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            background-color: var(--white);
+            left: 20%;
+            right: 20%;
+            bottom: -6px;
+          }
+        }
+      }
+
+      a {
+        color: var(--white);
+        text-decoration: none;
+        @include md {
+          color: var(--black);
+        }
+      }
+    }
+  }
+
+  display: flex;
+  @include md {
+    flex-direction: column;
+  }
+
+  #cover-image {
+    flex: 12;
+    position: relative;
+    background-color: var(--black);
+    background-image: url('./images/desktop-image-hero-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include md {
+      height: 120vw;
+      // width: 100%;
+      flex: auto;
+    }
+
+    #pager {
+      position: absolute;
+      background-color: var(--black);
+
+      bottom: 0;
+      right: -164px;
+
+      @include md {
+        right: 0;
+      }
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      #next,
+      #previous {
+        padding: 34px;
+        // height: auto;
+        // width: 64px;
+        cursor: pointer;
+        @include md {
+          padding: 20px;
+        }
+
+        &:hover {
+          background-color: var(--dark-gray);
+        }
+      }
+    }
+  }
+  #cover-meta {
+    flex: 6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 0 80px;
+
+    @include md {
+      padding: 40px 20px;
+      flex: auto;
+    }
+
+    #cover-title {
+      font-size: 3em;
+      font-weight: 700;
+      @include md {
+        font-size: 2.5em;
+        font-weight: 600;
+      }
+    }
+    #cover-description {
+      margin-top: 30px;
+      color: var(--dark-gray);
+      line-height: 1.6em;
+    }
+
+    .action {
+      margin-top: 30px;
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+
+      display: flex;
+      align-items: center;
+
+      cursor: pointer;
+
+      &:hover {
+        filter: opacity(0.5);
+      }
+
+      img {
+        margin-left: 30px;
+      }
+    }
+  }
+}
+
+#about {
+  flex: 3;
+
+  display: flex;
+
+  @include md {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .text {
+    flex: 6;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 40px;
+
+    @include md {
+      padding: 50px 20px;
+      flex: auto;
+    }
+
+    .title {
+      font-weight: 700;
+      // font-size: 1.1em;
+      color: var(--black);
+      text-transform: uppercase;
+      letter-spacing: 0.5em;
+    }
+    .description {
+      margin-top: 10px;
+      color: var(--dark-gray);
+      line-height: 1.6em;
+    }
+  }
+
+  .dark-img,
+  .light-img {
+    flex: 5;
+
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include md {
+      flex: auto;
+      height: 60vw;
+    }
+  }
+
+  .dark-img {
+    background-image: url('./images/image-about-dark.jpg');
+  }
+  .light-img {
+    background-image: url('./images/image-about-light.jpg');
+  }
+}

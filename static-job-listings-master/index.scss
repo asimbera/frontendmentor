@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@500;700&display=swap');
+
+// Variables
+:root {
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --light-grayish-cyan: hsl(180, 52%, 96%);
+  --light-grayish-cyan-alt: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+
+// Reset
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 15px;
+  background-color: var(--light-grayish-cyan);
+}
+
+#header {
+  background-color: var(--desaturated-dark-cyan);
+  background-image: url(./images/bg-header-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 140px;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+
+  #filter-container {
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    right: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+
+    #filter {
+      background-color: white;
+      padding: 15px 30px;
+      box-shadow: 0 5px 40px 0 var(--dark-grayish-cyan);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 5px;
+    }
+
+    #chips {
+      display: flex;
+      align-items: center;
+
+      * + * {
+        margin-left: 8px;
+      }
+      .chip {
+        background-color: var(--light-grayish-cyan);
+        color: var(--desaturated-dark-cyan);
+        display: flex;
+        align-items: center;
+        font-size: 0.9em;
+
+        p {
+          padding: 5px 8px;
+        }
+
+        .clear-chip {
+          background-color: var(--desaturated-dark-cyan);
+          color: var(--light-grayish-cyan);
+          padding: 5px 8px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: var(--very-dark-grayish-cyan);
+          }
+        }
+      }
+    }
+    #clear {
+      color: var(--desaturated-dark-cyan);
+      font-size: 0.8em;
+
+      &:hover {
+        border-bottom: 1px solid var(--desaturated-dark-cyan);
+      }
+    }
+  }
+}
+
+#content {
+  max-width: 1200px;
+  margin: 80px auto;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 20px 25px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 0 var(--desaturated-dark-cyan);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  // For [Featured] card
+  &[data-featured] {
+    border-left: 4px solid var(--desaturated-dark-cyan);
+  }
+
+  // Self Spacing
+  & + & {
+    margin-top: 20px;
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & > .logo {
+      width: 64px;
+      height: auto;
+    }
+    & > .meta {
+      margin-left: 10px;
+      & > * + * {
+        margin-top: 8px;
+      }
+    }
+  }
+  .right {
+    display: flex;
+    * + * {
+      margin-left: 10px;
+    }
+    .tag {
+      background-color: var(--light-grayish-cyan);
+      color: var(--desaturated-dark-cyan);
+      padding: 3px 5px;
+      border-radius: 1px;
+      font-size: 0.8em;
+      cursor: pointer;
+
+      &:hover {
+        color: var(--light-grayish-cyan);
+        background-color: var(--desaturated-dark-cyan);
+      }
+    }
+  }
+
+  // Nested Items
+  .company-and-highlights {
+    display: flex;
+    align-items: center;
+  }
+
+  .company {
+    color: var(--desaturated-dark-cyan);
+    font-size: 0.9em;
+    font-weight: 700;
+  }
+  .highlights {
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+
+    * + * {
+      margin-left: 5px;
+    }
+
+    .highlight {
+      color: white;
+      background-color: var(--desaturated-dark-cyan);
+      font-size: 0.6em;
+      font-weight: 700;
+      padding: 4px 5px;
+      border-radius: 10px;
+      text-transform: uppercase;
+
+      &[data-featured] {
+        background-color: var(--very-dark-grayish-cyan);
+      }
+    }
+  }
+  .title {
+    font-weight: 700;
+    color: var(--very-dark-grayish-cyan);
+    cursor: pointer;
+
+    &:hover {
+      color: var(--desaturated-dark-cyan);
+    }
+  }
+  .subtitle {
+    color: var(--dark-grayish-cyan);
+    font-size: 0.8em;
+  }
+}
