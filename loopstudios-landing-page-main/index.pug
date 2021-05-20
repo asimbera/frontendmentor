@@ -1,0 +1,109 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.scss")
+    link(rel="icon", href="./images/favicon-32x32.png", type="image/png", sizes="32x32")
+    title Frontend Mentor | Loopstudios landing page
+  body
+    //- header section
+    header#header
+      nav
+        img.logo(src="./images/logo.svg", alt="Logo")
+        a(id="hamburger")
+          img.menu(src="./images/icon-hamburger.svg", alt="Hamburger", id="hamburger-open")
+          img.menu(src="./images/icon-close.svg", alt="Hamburger", id="hamburger-close")
+        ul.nav-links
+          li: a(href="#") About
+          li: a(href="#") Careers
+          li: a(href="#") Events
+          li: a(href="#") Products
+          li: a(href="#") Support
+      .content#menu-content
+        ul.nav-links
+          li: a(href="#") About
+          li: a(href="#") Careers
+          li: a(href="#") Events
+          li: a(href="#") Products
+          li: a(href="#") Support
+    //- main content
+    main
+      //- hero section
+      .hero#hero
+        div Immersive experiences that deliver
+      //- brand story section
+      .brand
+        img(src="./images/mobile/image-interactive.jpg", alt="Brand")
+        .content
+          p.title The leader in interactive VR
+          p.subtitle
+            | Founded in 2011, Loopstudios has been producing world-class virtual reality
+            | projects for some of the best companies around the globe.Our award-winning
+            | creations have transformed businesses through digital experiences that bind
+            | to their brand.
+      //- creations section
+      .creations
+        div.titlebar
+          p.title Our creations
+          button.btn-ghost See all
+        mixin creation(title)
+          div(style!=attributes.style)
+            //- darken the background
+            div.filter
+              p= title
+        mixin creation-desktop(title)
+          div.desktop(style!=attributes.style)
+            //- darken the background
+            div.filter
+              p= title
+        .creations-list
+          +creation('Deep earth')(style="background-image: url(./images/mobile/image-deep-earth.jpg)")
+          +creation('Night arcade')(style="background-image: url(./images/mobile/image-night-arcade.jpg)")
+          +creation('Soccer team VR')(style="background-image: url(./images/mobile/image-soccer-team.jpg)")
+          +creation('The grid')(style="background-image: url(./images/mobile/image-grid.jpg)")
+          +creation('From up above VR')(style="background-image: url(./images/mobile/image-from-above.jpg)")
+          +creation('Pocket borealis')(style="background-image: url(./images/mobile/image-pocket-borealis.jpg)")
+          +creation('The curiosity')(style="background-image: url(./images/mobile/image-curiosity.jpg)")
+          +creation('Make it fisheye')(style="background-image: url(./images/mobile/image-fisheye.jpg)")
+          +creation-desktop('Deep earth')(style="background-image: url(./images/desktop/image-deep-earth.jpg)")
+          +creation-desktop('Night arcade')(style="background-image: url(./images/desktop/image-night-arcade.jpg)")
+          +creation-desktop('Soccer team VR')(style="background-image: url(./images/desktop/image-soccer-team.jpg)")
+          +creation-desktop('The grid')(style="background-image: url(./images/desktop/image-grid.jpg)")
+          +creation-desktop('From up above VR')(style="background-image: url(./images/desktop/image-from-above.jpg)")
+          +creation-desktop('Pocket borealis')(style="background-image: url(./images/desktop/image-pocket-borealis.jpg)")
+          +creation-desktop('The curiosity')(style="background-image: url(./images/desktop/image-curiosity.jpg)")
+          +creation-desktop('Make it fisheye')(style="background-image: url(./images/desktop/image-fisheye.jpg)")
+        button.btn-ghost See all
+
+    //- footer section
+    footer
+      div
+        img.logo(src="./images/logo.svg", alt="Logo")
+        ul.nav-links
+          li: a(href="#") About
+          li: a(href="#") Careers
+          li: a(href="#") Events
+          li: a(href="#") Products
+          li: a(href="#") Support
+      div
+        div.social
+          a(href="")
+            img(src="./images/icon-facebook.svg", alt="Facebook")
+          a(href="")
+            img(src="./images/icon-twitter.svg", alt="Twitter")
+          a(href="")
+            img(src="./images/icon-pinterest.svg", alt="Pinteret")
+          a(href="")
+            img(src="./images/icon-instagram.svg", alt="Instagram")
+
+        p.copyright © 2021 Loopstudios. All rights reserved.
+    div.attribution
+      p
+        | Challenge by &nbsp;
+        a(href="https://www.frontendmentor.io?ref=challenge") Frontend Mentor.
+      p
+        | Coded by &nbsp;
+        a(href="https://github.com/asimbera") Asim Bera
+  script(src="index.js")
