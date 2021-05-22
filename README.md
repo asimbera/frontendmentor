@@ -19,5 +19,5 @@ React with css modules are used for complex challanges.
 ### Uncategorized
 
 - [x] Job listings with filtering - `Desktop Only`
-- [ ] Loopstudios landing page - `WIP`
+- [x] Loopstudios landing page - `Responsive`
 - [x] Room homepage - `Responsive`
