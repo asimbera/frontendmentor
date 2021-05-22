@@ -8,13 +8,13 @@ React with css modules are used for complex challanges.
 
 ### Newbie
 
-- [ ] 3 column preview card component
-- [ ] Article preview component
-- [ ] FAQ accordion card
-- [ ] Four card feature section
-- [ ] Profile card component
-- [ ] Social proof section
-- [ ] Stats preview card component
+- [ ] [3 column preview card component](newbie/3-column-preview-card-component-main)
+- [ ] [Article preview component](newbie/article-preview-component-master)
+- [ ] [FAQ accordion card](newbie/faq-accordion-card-main)
+- [ ] [Four card feature section](newbie/four-card-feature-section-master)
+- [ ] [Profile card component](newbie/profile-card-component-main)
+- [ ] [Social proof section](newbie/social-proof-section-master)
+- [ ] [Stats preview card component](newbie/stats-preview-card-component-main)
 
 ### Uncategorized
 
