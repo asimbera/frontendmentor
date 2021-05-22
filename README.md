@@ -12,7 +12,7 @@ React with css modules are used for complex challanges.
 - [ ] [Article preview component](newbie/article-preview-component-master)
 - [ ] [FAQ accordion card](newbie/faq-accordion-card-main)
 - [ ] [Four card feature section](newbie/four-card-feature-section-master)
-- [ ] [Profile card component](newbie/profile-card-component-main)
+- [x] [Profile card component](newbie/profile-card-component-main)
 - [ ] [Social proof section](newbie/social-proof-section-master)
 - [ ] [Stats preview card component](newbie/stats-preview-card-component-main)
 
