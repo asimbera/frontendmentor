@@ -16,8 +16,11 @@ React with css modules are used for complex challanges.
 - [ ] [Social proof section](newbie/social-proof-section-master)
 - [ ] [Stats preview card component](newbie/stats-preview-card-component-main)
 
-### Uncategorized
+### Junior
 
-- [x] Job listings with filtering - `Desktop Only`
 - [x] Loopstudios landing page - `Responsive`
+
+### Intermediate
+
+- [x] Job listings with filtering - `Desktop`
 - [x] Room homepage - `Responsive`
