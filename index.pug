@@ -4,12 +4,50 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="index.scss")
     title Frontend Mentor | Challanges
   body
-    ul
-      li
-        a(href="static-job-listings-master/index.pug") Job listings with filtering
-      li
-        a(href="room-homepage-master/index.pug") Room homepage
-      li
-        a(href="loopstudios-landing-page-main/index.pug") Loopstudios landing page
+    //- (data-theme='dark')
+    .root
+      header
+        .title
+          p.logo Frontend Mentor | Challanges
+          button#toggle-theme
+            i.lar.la-moon
+            //- i.lar.la-sun
+        .tabs
+          a.tab(data-index="0") NEWBIE
+          a.tab(data-index="1") JUNIOR
+          a.tab(data-index="2"  data-active="true") INTERMEDIATE
+          a.tab(data-index="3") ADVANCED
+          a.tab(data-index="4") GURU
+      main
+        mixin item(image, title, duration, tags, live, repo)
+          .card.item
+            img.cover(src= image)
+            .meta
+              .left
+                .title= title
+                .duration
+                  | Duration:
+                  code(style="margin-left: 2px")= duration
+              .right
+                .stack
+                  each val in tags
+                    span= val
+            .actions
+              a.button(data-variant="text" style="color: blue" href= live)
+                i.las.la-binoculars(style="margin-right: 4px")
+                span View Live
+              a.button(data-variant="text" href="")
+                i.lab.la-github(style="margin-right: 4px")
+                span Source Code
+        .tabview(data-index="0" style="display: none")
+        .tabview(data-index="1" style="display: none")
+          +item("loopstudios-landing-page-main/design/desktop-preview.jpg", "Loopstudios landing page", "04:00 Hrs", ["PugJS", "SCSS"], "loopstudios-landing-page-main/index.pug", "")
+        .tabview(data-index="2")
+          +item("static-job-listings-master/design/desktop-preview.jpg", "Job listings with filtering", "04:30 Hrs", ["PugJS", "SCSS", "Typescript", "Desktop"], "static-job-listings-master/index.pug", "")
+          +item("room-homepage-master/design/desktop-preview.jpg", "Room homepage", "03:00 Hrs", ["PugJS", "SCSS"], "room-homepage-master/index.pug", "")
+      footer
+        p &copy; 2021 - Asim Bera
+  script(src="index.ts")
