@@ -94,7 +94,7 @@ body {
 }
 
 .card {
-  max-width: 300px;
+  max-width: 320px;
   width: 100%;
   background-color: white;
   border-radius: 10px;
@@ -110,15 +110,15 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 120px;
+  height: 140px;
 
   border-radius: 10px 10px 0 0;
 }
 
 img.profile-image {
-  margin-top: -35px;
+  margin-top: -40px;
 
-  height: 70px;
+  height: 80px;
   width: auto;
   border-radius: 100px;
   border: 3px solid white;
@@ -152,7 +152,7 @@ p.city {
 }
 
 .stats {
-  padding: 20px 0;
+  padding: 30px 0;
   width: 100%;
 
   display: flex;
@@ -176,5 +176,9 @@ p.city {
 
 div.attribution {
   background-color: transparent;
-  // color: black;
+  position: absolute;
+  z-index: 10;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
