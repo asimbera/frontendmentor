@@ -1,0 +1,2 @@
+const t=document.getElementsByClassName("tab"),e=document.getElementsByClassName("tabview");for(let a=0;a<t.length;a++){const l=t.item(a);l.onclick=()=>{n(),i(),l.setAttribute("data-active","true");for(let t=0;t<e.length;t++){const n=e.item(t);n.getAttribute("data-index")===l.getAttribute("data-index")&&(n.style.display="grid")}}}function n(){for(let e=0;e<t.length;e++){t.item(e).removeAttribute("data-active")}}function i(){for(let t=0;t<e.length;t++){e.item(t).style.display="none"}}
+//# sourceMappingURL=index.925b56fe.js.map
