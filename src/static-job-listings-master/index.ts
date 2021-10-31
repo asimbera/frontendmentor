@@ -14,7 +14,7 @@ interface IJob {
 
 let data: Array<IJob> = [
   {
-    image: require('url:./images/photosnap.svg') as string,
+    image: new URL('url:./images/photosnap.svg', import.meta.url).toString(),
     company: 'Photosnap',
     hightlights: ['New!', 'Featured'],
     title: 'Senior Frontend Developer',
@@ -27,7 +27,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/manage.svg') as string,
+    image: new URL('url:./images/manage.svg', import.meta.url).toString(),
     company: 'Manage',
     hightlights: ['New!', 'Featured'],
     title: 'Fullstack Developer',
@@ -41,7 +41,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/account.svg') as string,
+    image: new URL('url:./images/account.svg', import.meta.url).toString(),
     company: 'Account',
     hightlights: ['New!'],
     title: 'Junior Frontend Developer',
@@ -55,7 +55,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/myhome.svg') as string,
+    image: new URL('url:./images/myhome.svg', import.meta.url).toString(),
     company: 'MyHome',
     title: 'Junior Frontend Developer',
     time: '5d ago',
@@ -67,7 +67,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/loop-studios.svg') as string,
+    image: new URL('url:./images/loop-studios.svg', import.meta.url).toString(),
     company: 'Loop Studios',
     title: 'Software Engineer',
     time: '1w ago',
@@ -80,7 +80,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/faceit.svg') as string,
+    image: new URL('url:./images/faceit.svg', import.meta.url).toString(),
     company: 'FaceIt',
     title: 'Junior Backend Developer',
     time: '2w ago',
@@ -93,7 +93,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/shortly.svg') as string,
+    image: new URL('url:./images/shortly.svg', import.meta.url).toString(),
     company: 'Shortly',
     title: 'Junior Developer',
     time: '2w ago',
@@ -106,7 +106,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/insure.svg') as string,
+    image: new URL('url:./images/insure.svg', import.meta.url).toString(),
     company: 'Insure',
     title: 'Junior Frontend Developer',
     time: '2w ago',
@@ -119,7 +119,7 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/eyecam-co.svg') as string,
+    image: new URL('url:./images/eyecam-co.svg', import.meta.url).toString(),
     company: 'Eyecam Co.',
     title: 'Full Stack Engineer',
     time: '3w ago',
@@ -132,7 +132,10 @@ let data: Array<IJob> = [
   },
 
   {
-    image: require('url:./images/the-air-filter-company.svg') as string,
+    image: new URL(
+      'url:./images/the-air-filter-company.svg',
+      import.meta.url
+    ).toString(),
     company: 'The Air Filter Company',
     title: 'Front-end Dev',
     time: '1mo ago',

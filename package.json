@@ -3,17 +3,22 @@
   "version": "1.0.0",
   "author": "Asim Bera <asimbera@outlook.in> (https://asim.social/)",
   "license": "MIT",
+  "source": "./src/index.pug",
   "scripts": {
-    "start": "parcel serve index.pug",
-    "build": "parcel build index.pug"
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "targets": {
+    "default": {
+      "publicUrl": "/frontendmentor-challenges"
+    }
   },
   "devDependencies": {
-    "@parcel/transformer-image": "2.0.0-beta.2",
-    "@parcel/transformer-pug": "2.0.0-beta.2",
-    "@parcel/transformer-sass": "2.0.0-beta.2",
-    "autoprefixer": "^10.2.5",
-    "parcel": "^2.0.0-beta.2",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2"
+    "@parcel/transformer-pug": "^2.0.0",
+    "@parcel/transformer-sass": "^2.0.0",
+    "autoprefixer": "^10.4.0",
+    "parcel": "^2.0.0",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.19"
   }
 }
