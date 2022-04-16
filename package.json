@@ -10,7 +10,7 @@
   },
   "targets": {
     "default": {
-      "publicUrl": "/frontendmentor-challenges"
+      "publicUrl": "/frontendmentor"
     }
   },
   "devDependencies": {
